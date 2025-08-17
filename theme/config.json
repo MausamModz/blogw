@@ -1,14 +1,15 @@
 {
+  "themeName": "apmody",
   "firebaseConfig": {
-    "apiKey": "AIzaSyCOGoSQy9QHfMNZbKYRh7A9YKN0UqIxFHs",
-    "authDomain": "licencesdb.firebaseapp.com",
-    "databaseURL": "https://licencesdb-default-rtdb.firebaseio.com",
-    "projectId": "licencesdb",
-    "storageBucket": "licencesdb.firebasestorage.app",
-    "messagingSenderId": "702757237100",
-    "appId": "1:702757237100:web:6d0428228ebd02da04c349",
-    "measurementId": "G-NR07E49PWX"
+    "apiKey": "YOUR_API_KEY",
+    "authDomain": "YOUR_PROJECT.firebaseapp.com",
+    "databaseURL": "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
+    "projectId": "YOUR_PROJECT",
+    "storageBucket": "YOUR_PROJECT.appspot.com",
+    "messagingSenderId": "XXXX",
+    "appId": "1:XXXX:web:YYYY",
+    "measurementId": "G-ZZZZ"
   },
-  "defaultJsUrl": "https://cdnix.pages.dev/assets/script.js",
-  "defaultCssUrl": "https://cdnix.pages.dev/assets/styles.css"
+  "defaultJsUrl": "https://yourcdn.com/assets/script.js",
+  "defaultCssUrl": "https://yourcdn.com/assets/styles.css"
 }
