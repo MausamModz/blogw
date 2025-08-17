@@ -1,0 +1,14 @@
+{
+  "firebaseConfig": {
+    "apiKey": "AIzaSyCOGoSQy9QHfMNZbKYRh7A9YKN0UqIxFHs",
+    "authDomain": "licencesdb.firebaseapp.com",
+    "databaseURL": "https://licencesdb-default-rtdb.firebaseio.com",
+    "projectId": "licencesdb",
+    "storageBucket": "licencesdb.firebasestorage.app",
+    "messagingSenderId": "702757237100",
+    "appId": "1:702757237100:web:6d0428228ebd02da04c349",
+    "measurementId": "G-NR07E49PWX"
+  },
+  "defaultJsUrl": "https://cdnix.pages.dev/assets/script.js",
+  "defaultCssUrl": "https://cdnix.pages.dev/assets/styles.css"
+}
