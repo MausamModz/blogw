@@ -4,8 +4,8 @@
   "defaultCssUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/styles.css",
 
   "sites": {
-    "apmody.blogspot.com": {
-      "id": "882691899717496050",
+    "mausammods.blogspot.com": {
+      "id": "2670055739077818204",
       "url": "apmody.blogspot.com",
       "owner": "Aruf Hid",
       "type": "Premium",
@@ -13,11 +13,11 @@
       "jsUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/valid.js",
       "cssUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/valid.css",
       "ttl": "APMODY",
-      "demo": "https://apmody.blogspot.com/"
+      "demo": "https://mausammods.blogspot.com/"
     },
 
-    "mausammods.blogspot.com": {
-      "id": "2670055739077818204",
+    "apmody.blogspot.com": {
+      "id": "882691899717496050",
       "url": "mausammods.blogspot.com",
       "owner": "MausamMods",
       "type": "Premium",
@@ -25,7 +25,7 @@
       "jsUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/valid.js",
       "cssUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/valid.css",
       "ttl": "APMODY",
-      "demo": "https://mausammods.blogspot.com/"
+      "demo": "https://apmody.blogspot.com/"
     }
   }
 }
