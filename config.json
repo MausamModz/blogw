@@ -4,8 +4,8 @@
   "defaultCssUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/styles.css",
 
   "sites": {
-    "apmody_blogspot_com": {
-      "id": "2670055739077818204",
+    "apmody.blogspot.com": {
+      "id": "882691899717496050",
       "url": "apmody.blogspot.com",
       "owner": "Aruf Hid",
       "type": "Premium",
@@ -22,8 +22,8 @@
       "owner": "MausamMods",
       "type": "Premium",
       "isActive": true,
-      "jsUrl": "https://cdn.jsdelivr.net/gh/mausammodz/Blog-template/7fc8a14b2e94c3d5f9a176c8bd0e2f45a63e90db/",
-      "cssUrl": "https://yourcdn.example.com/themes/apmody/style.css",
+      "jsUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/valid.js",
+      "cssUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/valid.css",
       "ttl": "APMODY",
       "demo": "https://mausammods.blogspot.com/"
     }
