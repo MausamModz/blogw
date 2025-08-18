@@ -22,7 +22,7 @@
       "owner": "MausamMods",
       "type": "Premium",
       "isActive": true,
-      "jsUrl": "https://yourcdn.example.com/themes/apmody/main.js",
+      "jsUrl": "https://cdn.jsdelivr.net/gh/mausammodz/themestash/7fc8a14b2e94c3d5f9a176c8bd0e2f45a63e90db/",
       "cssUrl": "https://yourcdn.example.com/themes/apmody/style.css",
       "ttl": "APMODY",
       "demo": "https://your-demo.example/"
