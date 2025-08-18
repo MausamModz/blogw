@@ -1,10 +1,7 @@
-/* apmody.js — Firebase-free license loader */
 (() => {
-  // ==== CONFIG URL (base64) ====
   const CONFIG_URL_B64 = "aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL01hdXNhbU1vZHovYmxvZy9jb25maWcuanNvbg==";
   const CONFIG_URL = atob(CONFIG_URL_B64);
 
-  // ==== helpers ====
   const norm = (host) => host.replace(/\./g, "_");
 
   const injectJS = (url) => {
@@ -69,11 +66,9 @@
     } catch (e) {
       console.warn("Could not fetch config, loading defaults.", e.message || e);
     } finally {
-      // Always show the page
       showBody();
     }
   }
 
-  // Start as soon as DOM is ready
   document.addEventListener("DOMContentLoaded", start);
 })();
