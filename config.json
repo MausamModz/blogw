@@ -10,8 +10,8 @@
       "owner": "Aruf Hid",
       "type": "Premium",
       "isActive": true,
-      "jsUrl": "https://yourcdn.example.com/themes/apmody/main.js",
-      "cssUrl": "https://yourcdn.example.com/themes/apmody/style.css",
+      "jsUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/valid.js",
+      "cssUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/valid.css",
       "ttl": "APMODY",
       "demo": "https://apmody.blogspot.com/"
     },
