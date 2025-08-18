@@ -1,0 +1,31 @@
+{
+  "themeName": "apmody",
+  "defaultJsUrl": "https://yourcdn.example.com/assets/trial.js",
+  "defaultCssUrl": "https://yourcdn.example.com/assets/trial.css",
+
+  "sites": {
+    "apmody_blogspot_com": {
+      "id": "2670055739077818204",
+      "url": "apmody.blogspot.com",
+      "owner": "Aruf Hid",
+      "type": "Premium",
+      "isActive": true,
+      "jsUrl": "https://yourcdn.example.com/themes/apmody/main.js",
+      "cssUrl": "https://yourcdn.example.com/themes/apmody/style.css",
+      "ttl": "APMODY",
+      "demo": "https://apmody.blogspot.com/"
+    },
+
+    "mydomain_com": {
+      "id": "2670055739077818204",
+      "url": "mausammods.blogspot.com",
+      "owner": "MausamMods",
+      "type": "Premium",
+      "isActive": true,
+      "jsUrl": "https://yourcdn.example.com/themes/apmody/main.js",
+      "cssUrl": "https://yourcdn.example.com/themes/apmody/style.css",
+      "ttl": "APMODY",
+      "demo": "https://your-demo.example/"
+    }
+  }
+}
