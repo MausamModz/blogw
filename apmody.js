@@ -1,5 +1,5 @@
 const THEME_NAME = "apmody";
-const CONFIG_URL_B64 = "PASTE_BASE64_CONFIG_URL_HERE";
+const CONFIG_URL_B64 = "aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL01hdXNhbU1vZHovYmxvZ3cvY29uZmlnLmpzb24=";
 const CONFIG_URL = atob(CONFIG_URL_B64);
 
 let firebaseConfig = null;
@@ -82,7 +82,7 @@ async function start() {
       console.log("Type : " + (data.type || "Premium"));
       console.groupEnd();
       console.group((data.ttl || "APMODY") + " - Blogger templates");
-      console.log("Demo : " + (data.demo || "https://example.com/"));
+      console.log("Demo : " + (data.demo || "https://apmody.blogspot.com/"));
       console.groupEnd();
       console.groupEnd();
 
