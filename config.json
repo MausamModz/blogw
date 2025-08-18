@@ -1,7 +1,7 @@
 {
   "themeName": "apmody",
-  "defaultJsUrl": "https://yourcdn.example.com/assets/trial.js",
-  "defaultCssUrl": "https://yourcdn.example.com/assets/trial.css",
+  "defaultJsUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/script.js",
+  "defaultCssUrl": "https://cdn.jsdelivr.net/gh/MausamModz/blogw/assets/styles.css",
 
   "sites": {
     "apmody_blogspot_com": {
