@@ -1,0 +1,29 @@
+/* Licensed site styles */
+
+/* Example: Licensed header banner */
+body::before {
+  content: "✔ Licensed Domain – Premium Theme Active";
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  font: 14px/1.4 system-ui, Arial, sans-serif;
+}
+
+/* Example: Give body a nice font */
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Example: Style links */
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
