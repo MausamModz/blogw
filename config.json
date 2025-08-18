@@ -16,16 +16,16 @@
       "demo": "https://apmody.blogspot.com/"
     },
 
-    "mydomain_com": {
+    "mausammods.blogspot.com": {
       "id": "2670055739077818204",
       "url": "mausammods.blogspot.com",
       "owner": "MausamMods",
       "type": "Premium",
       "isActive": true,
-      "jsUrl": "https://cdn.jsdelivr.net/gh/mausammodz/themestash/7fc8a14b2e94c3d5f9a176c8bd0e2f45a63e90db/",
+      "jsUrl": "https://cdn.jsdelivr.net/gh/mausammodz/Blog-template/7fc8a14b2e94c3d5f9a176c8bd0e2f45a63e90db/",
       "cssUrl": "https://yourcdn.example.com/themes/apmody/style.css",
       "ttl": "APMODY",
-      "demo": "https://your-demo.example/"
+      "demo": "https://mausammods.blogspot.com/"
     }
   }
 }
